@@ -1,0 +1,3 @@
+function login(){var n=$("#username").val(),o=$("#password").val(),e=new FormData;e.append("user",n),e.append("pass",o),""!=n&&""!=o&&4<n.length?async function(n,o){return await fetch(n,{method:"POST",body:o}).then(n=>n.json()).then(n=>n)}("../cms/controller/login.php",e).then(n=>{"1"==n?(t("success","Login Success",1500),setTimeout(function(){window.location.href="../cms/index.php"},1500)):t("info","Error: "+n,1500)}):t("info","The field user and password important",1500);function t(n,o,e){Swal.fire({position:"top-center",icon:n,title:o,showConfirmButton:!1,timer:e,timerProgressBar:!0,onBeforeOpen:()=>{Swal.showLoading()}})}$(document).ready(function(){})}
+		
+
